@@ -5,9 +5,14 @@
   <meta charset="UTF-8">
   <title>Lista de la compra</title>
   <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
@@ -19,26 +24,94 @@
           <input type="text" class="form-control" id="elemento" placeholder="Introduce la comida">
         </div>
         <button id="btnañadir" class="btn btn-info">Añadir elemento</button>
-        <button id="btncomprar" class="btn btn-primary">Realizar compra</button>
+        <button id="btncarro" class="btn btn-primary">Realizar compra</button>
       </form>
     </div >
     <div id = "listado" class="row">
       <ul class="list-group">
-        <li class="list-group-item"><span class="pull-left">Peras</span><span class="badge pull-left">0</span>
-          <button type="button" class="btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+        <li class="list-group-item"><span class="pull-left producto">Peras</span><span class="cantidad badge pull-left">0</span>
+
+          <button type="button" class="menos btn btn-default pull-right glyphicon glyphicon glyphicon-minus">
           </button>
+          <button type="button" class="carrito btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+          </button>
+          <button type="button" class="mas btn btn-default pull-right glyphicon glyphicon glyphicon-plus">
+          </button>
+          <button type="button" class="borrar btn btn-default pull-right glyphicon glyphicon-trash">
+          </button>
+
         </li>
-        <li class="list-group-item"><span class="pull-left">Manzanas</span><span class="badge pull-left">0</span>
-          <button type="button" class="btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+        <li class="list-group-item"><span class="pull-left producto">Manzanas</span><span class="cantidad badge pull-left">0</span>
+
+          <button type="button" class="menos btn btn-default pull-right glyphicon glyphicon glyphicon-minus">
           </button>
+          <button type="button" class="carrito btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+          </button>
+          <button type="button" class="mas btn btn-default pull-right glyphicon glyphicon glyphicon-plus">
+          </button>
+          <button type="button" class="borrar btn btn-default pull-right glyphicon glyphicon-trash">
+          </button>
+
         </li>
-        <li class="list-group-item"><span class="pull-left">Melocotones</span><span class="badge pull-left">0</span>
-          <button type="button" class="btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+        <li class="list-group-item"><span class="pull-left producto">Melocotones</span><span class="cantidad badge pull-left">0</span>
+
+          <button type="button" class="menos btn btn-default pull-right glyphicon glyphicon glyphicon-minus">
           </button>
+          <button type="button" class="carrito btn btn-default pull-right glyphicon glyphicon-shopping-cart">
+          </button>
+          <button type="button" class="mas btn btn-default pull-right glyphicon glyphicon glyphicon-plus">
+          </button>
+          <button type="button" class="borrar btn btn-default pull-right glyphicon glyphicon-trash">
+          </button>
+
         </li>
       </ul>
     </div>
   </div>
+  <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>¿Seguro que quieres borrar?</p>
+      </div>
+      <div class="modal-footer">
+      <button id = "modalSi" type="button" class="btn btn-default" data-dismiss="modal">SI</button>
+        <button id = "modalNo" type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>¿Seguro que quieres realia la compra de todos los artículos?</p>
+      </div>
+      <div class="modal-footer">
+      <button id = "modal2Si" type="button" class="btn btn-default" data-dismiss="modal">SI</button>
+        <button id = "modal2No" type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
   <script src="main.js"></script>
 </body>
 
